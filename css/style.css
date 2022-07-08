@@ -1,0 +1,142 @@
+/* common */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #656565;
+}
+h1 {
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+} 
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.inner {
+  width: 1020px;
+  margin: 0 auto;
+  position: relative;
+}
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  transition: .4s;
+}
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+/* header */
+header {
+  background: #F6F5F0;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 1px solid #c8c8c8;
+}
+header > .inner {
+  height: 58px;
+}
+header .inner .logo h1 {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+header .inner .logo h1::after {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  top: -11px;
+  bottom: 0;
+  left: 140px;
+  margin: auto;
+}
+header .inner .logo i {
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  bottom: 0;
+  right: 180px;
+  margin: auto;
+}
+
+header .inner .logo-text {
+  position: absolute;
+  font-size: 18px;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  line-height: 1px;
+  margin-left: 160px;
+}
+
+/* section - 1) menu */
+.menu {
+  background: #F6F5F0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #c8c8c8;
+  margin-top: 59px;
+  position: relative;
+}
+.menu > .inner {
+  height: 58px;
+}
+.menu .inner ul {
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: -50px;
+  margin: auto;
+  display: flex;
+}
+.menu .inner .title li {
+  position: relative;
+}
+.menu .inner .title li::before {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  top: -16px;
+  bottom: 0;
+  margin: auto;
+}
+.menu .inner .title li:first-child::before {
+  display: none;
+}
+.menu .inner .title li a {
+  padding: 6px 16px;
+  display: block;
+  color: #656565;
+}
