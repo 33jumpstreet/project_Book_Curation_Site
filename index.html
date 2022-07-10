@@ -6,18 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>책 추천해드립니다.</title>
   <!-- 구글 웹 폰트 -->
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
-  <!-- js -->
-  <script defer src="./js/script.js"></script>
-
   <!-- swiper 라이브러리 -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>  
   <!-- fontawesome -->
   <script defer src="https://kit.fontawesome.com/591086c795.js" crossorigin="anonymous"></script>
+  <!-- 제이쿼리 -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+  </script>
+  <!-- js -->
+  <script defer src="js/script.js"></script>
+  <script defer src="js/library.js"></script>
 </head>
 <body>
   <header>
@@ -41,7 +47,7 @@
     <div class="inner">
       <ul class="title">
         <li><a href="#">홈</a></li>
-        <li><a href="#">책중심</a></li>
+        <li><a href="#" class="btn-search">책중심</a></li>
         <li><a href="#">The Book</a></li>
         <li><a href="#">Oh_My_Chart</a></li>
       </ul>
@@ -126,5 +132,30 @@
   </section>
   <!-- // section - visual  -->
 
+  <!-- section - book_core -->
+  <section class="book_core">
+    <div class="swiper">
+      <h3>[SHOW 책중심] 전국도서관  6월 인기 대출도서 TOP10</h3>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides - 템플릿 복제 -->
+      </div>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="fa fa-angle-left"></i>
+    </div>
+    <div class="swiper-button-next">
+      <i class="fa fa-angle-right"></i>
+    </div>
+  </section>
+  <!-- 템플릿 -->
+  <div class="swiper-slide" id="item-template" >
+    <div class="item-ranking"></div>
+    <img class="item-img"></img> 
+    <div class="item-name"></div> 
+    <div class="item-author"></div> 
+    <div class="item-publisher"></div>
+  </div> 
+  <!-- // section - book_core -->
 </body>
 </html>
