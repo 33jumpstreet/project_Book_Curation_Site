@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>책 추천해드립니다.</title>
+  <title>BOOK.QUE</title>
   <!-- 구글 웹 폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
   <!-- js -->
   <script defer src="js/script.js"></script>
   <script defer src="js/library.js"></script>
-  <!-- <script defer src="./js/cue.js"></script> -->
+  <script defer src="./js/aladin.js"></script>
   <!-- <script defer src="./js/kakaoApi.js"></script> -->
 </head>
 <body>
@@ -208,13 +208,17 @@
   <!-- // section - book_core -->
   
   <!-- section - bestseller -->
-  <section class="bestseller"></section>
+  <section class="bestseller">
+    <h3>요즘 베스트셀러 TOP12</h3>
+    <div class="inner">
+    </div>
+  </section>
   <!-- // section - bestseller -->
   
   <!-- section - curation_two -->
   <section class="curation_two">
     <div class="curation">
-      <h3>편의점 자주 가세요? 이번엔 읽어 보세요</h3>
+      <h3>편의점 자주 가세요?</h3>
       <div class="detail">
         <div>
           <img src="./img/cue11.jpg" alt="불편한 편의점">
@@ -416,13 +420,23 @@
   </section>
   <!-- // section - curation_two -->
 
-  <!-- 템플릿 -->
+  <!-- 템플릿 - book_core -->
   <div class="swiper-slide" id="item-template" >
     <div class="item-ranking"></div>
     <img class="item-img"></img> 
     <div class="item-name"></div> 
     <div class="item-author"></div> 
     <div class="item-publisher"></div>
+  </div>
+
+  <!-- 템플릿 - bestseller -->
+  <div class="seller" id="seller-item">
+    <div class="item-ranking"></div>
+    <img class="item-img"></img>
+    <div class="detail">
+      <div class="item-name"></div> 
+      <div class="item-author"></div>         
+    </div> 
   </div>
 </body>
 </html>
