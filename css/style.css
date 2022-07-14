@@ -65,7 +65,7 @@ header .inner .logo i {
   position: absolute;
   top: 15px;
   bottom: 0;
-  right: 0;
+  right: 180px;
   margin: auto;
 }
 
@@ -113,6 +113,45 @@ header .inner .logo-text {
   font-weight: 700;
 }
 
+/* header - menu - search */
+.menu .inner .search {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  right: 180px;
+  /* margin-top: 13px; */
+}
+.menu .search input {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;
+}
+.menu .search input:focus {
+  width: 198px;
+  border-color: #333;
+}
+.menu .search .material-icons {
+  height: 22px;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+.menu .search.focused .material-icons {
+  opacity: 0;
+}
 
 /* section - 2)visual */
 .visual {
@@ -173,60 +212,19 @@ header .inner .logo-text {
   display: none;
 }
 
-/* section - curation_one */
-/* section - curation_two */
-.curation_one {
-  background-color: #FFF2F2;
-  height: 864px;
-  width: 100%;
-}
-.curation_one .curation,
-.curation_two .curation {
-  width: 1020px;
-  height: 432px;
-  margin: 0 auto;
-}
-.curation_one .curation .detail,
-.curation_two .curation .detail {
-  display: flex;
-  width: 170px;
-  padding: 0 15px 4px 15px;
-}
-.curation_one .curation .detail img,
-.curation_two .curation .detail img {
-  width: 170px;
-  height: 240px;  
-  padding: 0 15px 4px 15px;
-}
-.curation_one .curation .detail p,
-.curation_two .curation .detail p {
-  width: 170px;
-  font-size: 15px;
-  font-weight: 400;
-  padding: 0 0 4px 15px;
-}
-.curation_one h3,
-.curation_two h3 {
-  margin-top: 0;
-  padding: 25px 0;
-}
-.curation_two {
-  background-color: #FFF2F2;
-  margin-top: 0;
-  height: 3456px;
-  width: 100%;
-}
-
 /* section - bookcore */
 .book_core {
   display: flex;
   justify-content: center;
   background-color:#FFE6E6;
-  height: 450px;
-  transition: height .4s;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  height: 450px;
+  transition: height .4s;
+}
+.book_core.hide {
+  padding: 40px 0;
+  height: 0;
 }
 .book_core .swiper {
   width: 1020px;
@@ -279,22 +277,20 @@ header .inner .logo-text {
 }
 .book_core .swiper-button-prev,
 .book_core .swiper-button-next {
-  position: absolute;
   width: 42px;
   height: 42px;
   border: 2px solid rgba(0, 0, 0, 0.07);
   border-radius: 50%;
-  top: 228px;
+  top: 200px;
   z-index: 1;
   color: #333;  
+  opacity: .3;
 }
 .book_core .swiper-button-prev {
-  left: 30%;
-  left: 180px;
+  left: -100px;
 }
 .book_core .swiper-button-next {
-  right: 30%;
-  right: 180px;
+  right: -110px;
 }
 .book_core .swiper-button-prev:hover,
 .book_core .swiper-button-next:hover {
@@ -308,6 +304,9 @@ header .inner .logo-text {
 }
 
 /* section - bestseller */
+#seller-item {
+  display: none;
+}
 .bestseller {
   background-color: #FAD4D4;
   height: 600px;
@@ -402,19 +401,65 @@ header .inner .logo-text {
   font-size: 14px;
   position: absolute;
   left: 100px;
-  top: 20px;
   width: 200px;
 }
 .bestseller .seller .detail .item-name {
   font-weight: 700;
-  margin-bottom: 3px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-bottom: 7px;
   overflow: hidden;
-
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .bestseller .seller .detail .item-author {
+  overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* section - curation_one */
+/* section - curation_two */
+.curation_one {
+  background-color: #FFF2F2;
+  height: 864px;
+  width: 100%;
+}
+.curation_one .curation,
+.curation_two .curation {
+  width: 1020px;
+  height: 432px;
+  margin: 0 auto;
+}
+.curation_one .curation .detail,
+.curation_two .curation .detail {
+  display: flex;
+  width: 170px;
+  padding: 0 15px 4px 15px;
+}
+.curation_one .curation .detail img,
+.curation_two .curation .detail img {
+  width: 170px;
+  height: 240px;  
+  padding: 0 15px 4px 15px;
+}
+.curation_one .curation .detail p,
+.curation_two .curation .detail p {
+  width: 170px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 0 4px 15px;
+}
+.curation_one h3,
+.curation_two h3 {
+  margin-top: 0;
+  padding: 25px 0;
+}
+.curation_two {
+  background-color: #FFF2F2;
+  margin-top: 0;
+  height: 3456px;
+  width: 100%;
 }

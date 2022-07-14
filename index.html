@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BOOK.QUE</title>
+  <!-- 파비콘  -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
+  <!-- 구글 material Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
   <!-- 구글 웹 폰트 -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
@@ -49,10 +53,14 @@
     <div class="inner">
       <ul class="title">
         <li><a href="#">홈</a></li>
-        <li><a href="#">책중심</a></li>
-        <li><a href="#">The Book</a></li>
-        <li><a href="#">Oh_My_Chart</a></li>
+        <li><a href="#" class="core_btn">책중심</a></li>
+        <li><a href="#" class="best_btn">The Book</a></li>
+        <li><a href="#" class="cue_btn">QUE</a></li>
       </ul>
+      <div class="search">
+        <input type="text" />
+        <span class="material-icons">search</span>
+      </div>
     </div>
   </section>
   <!-- // section - 메뉴 -->
@@ -191,18 +199,20 @@
 
   <!-- section - book_core -->
   <section class="book_core">
-    <div class="swiper">
-      <h3>[SHOW 책중심] 전국도서관  6월 인기 대출도서 TOP10</h3>
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides - 템플릿 복제 -->
+    <div class="inner">
+      <div class="swiper">
+        <h3>[SHOW 책중심] 전국도서관  6월 인기 대출도서 TOP10</h3>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides - 템플릿 복제 -->
+        </div>
       </div>
-    </div>
-    <div class="swiper-button-prev">
-      <i class="fa fa-angle-left"></i>
-    </div>
-    <div class="swiper-button-next">
-      <i class="fa fa-angle-right"></i>
+      <div class="swiper-button-prev">
+        <i class="fa fa-angle-left"></i>
+      </div>
+      <div class="swiper-button-next">
+        <i class="fa fa-angle-right"></i>
+      </div>  
     </div>
   </section> 
   <!-- // section - book_core -->
@@ -424,9 +434,9 @@
   <div class="swiper-slide" id="item-template" >
     <div class="item-ranking"></div>
     <img class="item-img"></img> 
-    <div class="item-name"></div> 
+    <!-- <div class="item-name"></div> 
     <div class="item-author"></div> 
-    <div class="item-publisher"></div>
+    <div class="item-publisher"></div> -->
   </div>
 
   <!-- 템플릿 - bestseller -->
