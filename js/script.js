@@ -1,6 +1,5 @@
 // card_slide 이미지 슬라이드 효과 - swiper
-new Swiper('.visual .swiper', {
-  // direction : horizontal; // 수평 슬라이드
+new Swiper('.first .swiper', {
   autoplay : true, // 자동 재생 여부
   loop : true, // 반복 재생 여부
   slidesPerView : 3, // 슬라이드 보이는 개수
@@ -13,17 +12,16 @@ new Swiper('.visual .swiper', {
 });
 
 // core 이미지 슬라이드 효과 - swiper
-new Swiper('.book_core .swiper', {
+new Swiper('.second .swiper', {
   autoplay : true, // 자동 재생 여부
-  observer : true,
+  observer: true,
   observeParents: true,
   loop : true, // 반복 재생 여부
   slidesPerView : 5, // 슬라이드 보이는 개수
-  spaceBetween : 30, // 슬라이드 사이 여백
   navigation : { // 슬라이드 이전/ 다음 버튼 사용
     prevEl: '.book_core .swiper-button-prev', // 이전 버튼 요소
     nextEl: '.book_core .swiper-button-next' // 다음 버튼 요소
-  },
+  }
 });
 
 // 책중심 메뉴 클릭시 같은 페이지 내에서 이동하기 
@@ -37,20 +35,23 @@ new Swiper('.book_core .swiper', {
 
 // 2) 버튼을 클릭하면 해당 좌표로 이동
 const $core_btn = document.querySelector('.core_btn');
-$core_btn.addEventListener('click', () => {
+$core_btn.addEventListener('click', (e) => {
   // window.scrollTo(x좌표, y좌표);
+  e.preventDefault();
   window.scrollTo({left:0, top: 1300,  behavior:'smooth'});
 });
 
 const $best_btn = document.querySelector('.best_btn');
-$best_btn.addEventListener('click', () => {
+$best_btn.addEventListener('click', (e) => {
   // window.scrollTo(x좌표, y좌표);
+  e.preventDefault();
   window.scrollTo({left:0, top: 1746,  behavior:'smooth'});
 });
 
 const $cue_btn = document.querySelector('.cue_btn');
-$cue_btn.addEventListener('click', () => {
+$cue_btn.addEventListener('click', (e) => {
   // window.scrollTo(x좌표, y좌표);
+  e.preventDefault();
   window.scrollTo({left:0, top: 2353,  behavior:'smooth'});
 });
 
